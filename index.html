@@ -4,49 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+    <link rel="stylesheet" href="./styles/style.css">
     <title>FOODDELIVERY</title>
 </head>
 <body>
-    <header>
-        <a href="./index.html">
-            <img src="./img/logo.svg" alt="foodsta" width="66" height="52">
-        </a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Service</a>
-                </li>
-                <li>
-                    <a href="#">Menu</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <button type="button">Order Now</button>
+    <!-- Header -->
+    <header class="page-header border">
+        <div class="container flex-nav mobile-burger">
+            <a href="./index.html" class="logo">
+                <img src="./img/logo.svg" alt="foodsta" width="66" height="52">
+            </a>
+            <nav class="flex-nav">
+                <ul class="site-nav list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="header-btn"><span>Order Now</span></button>
+
+            <button class="menu-toggle js-open-menu" type="button" 
+				aria-expanded="false" aria-controls="mobile-menu" aria-label="button mobile menu">
+					<svg class="mobile-menu-icon-open" width="32" height="32" aria-label="menu switch">
+						<use class="icon-burger" href="./img/icons.svg#burger-icon"></use>
+					</svg>
+				</button>
+
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu" 
+                    type="button"
+                    airia-label="button close mobile menu">
+                    <svg width="8" height="8">
+                        <use class="icon-close" href="./img/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+
+                <ul class="mobile-menu list">
+                    <li class="mobile-item"><button class="mob-btn-first" type="button"><a href="#" class="mobile-links link">Home</a></button></li>
+                    <li class="mobile-item"><button class="mob-btn" type="button"><a href="#" class="mobile-links link">About</a></button></li>
+                    <li class="mobile-item"><button class="mob-btn" type="button"><a href="#" class="mobile-links link">Service</a></button></li>
+                    <li class="mobile-item"><button class="mob-btn" type="button"><a href="#" class="mobile-links link">Menu</a></button></li>
+                    <li class="mobile-item"><button class="mob-btn-last" type="button"><a href="#" class="mobile-links link">Contact</a></button></li>
+                </ul>
+            
+                </div>
+
+        </div>
     </header>
 
     <main>
         <!-- Hero -->
-        <section>
-            <h1>
-                Enjoy Your Favorite Food From Anywhere
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-            </p>
-            <button type="button">Order Now</button>
-            <img src="./img/menu-header-1.svg" alt="name-eat" width="528" height="528">
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">
+                    Enjoy Your Favorite Food From Anywhere
+                </h1>
+                <p class="hero-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                </p>
+                <button class="hero-btn" type="button"><span>Order Now</span></button>
+                <div class="hero-img">
+                    <img class="visually-hidden" src="./img/menu-header-1.svg" alt="name-eat" width="528" height="528">
+                </div>
+            </div>
         </section>
         <!-- Benefits -->
-        <section>
+        <!-- <section>
             <img src="./img/apple-benefits.svg" alt="apple" width="396" height="502">
             <h2>What’s Special About Our Offerings</h2>
             <p>
@@ -69,9 +114,9 @@
                 </li>
             </ul>
             <button type="button">Order Now</button>
-        </section>
+        </section> -->
         <!-- Favorites -->
-        <section>
+        <!-- <section>
             <h2>Some of Our Favorites</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -96,15 +141,16 @@
                     <img src="./img/borshch.svg" alt="borshch" width="315" height="315">
                 </li>
             </ul>
-        </section>
+        </section> -->
         <!-- Customers reviews -->
-        <section>
+        <!-- <section>
             <h2>What our Customers Say</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             
-        </section>
+        </section> -->
     </main>
+    <script defer src="./mobile-menu.js"></script>
 </body>
 </html>
